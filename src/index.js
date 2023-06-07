@@ -13,6 +13,7 @@ const path_1 = __importDefault(require("path"));
 //import indexRoutes from './routes/indexRoutes';
 const usuarioRoutes_1 = __importDefault(require("./routes/usuarioRoutes"));
 const servicioRoutes_1 = __importDefault(require("./routes/servicioRoutes"));
+const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 //import adminRoutes from './routes/adminRoutes';
 class Server {
     //public upload=multer({dest: 'public/images'});
@@ -31,7 +32,7 @@ class Server {
         this.app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
     }
     routes() {
-        this.app.use('/',indexRoutes);
+        this.app.use('/', indexRoutes_1.default);
         this.app.use('/usuario', usuarioRoutes_1.default);
         this.app.use('/servicio', servicioRoutes_1.default);
         //this.app.use('/admin',adminRoutes);
