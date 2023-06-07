@@ -7,7 +7,7 @@ class IndexRoutes {
         this.config();
     }
     config() {
-        //this.router.get('/',indexController.index);
+        this.router.get('/',indexController.index);
     }
 }
 const indexRoutes = new IndexRoutes();

@@ -31,7 +31,7 @@ class Server {
         this.app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
     }
     routes() {
-        //this.app.use('/',indexRoutes);
+        this.app.use('/',indexRoutes);
         this.app.use('/usuario', usuarioRoutes_1.default);
         this.app.use('/servicio', servicioRoutes_1.default);
         //this.app.use('/admin',adminRoutes);
